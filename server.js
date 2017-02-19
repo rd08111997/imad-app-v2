@@ -5,14 +5,14 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var article = {
- 'articl-eone' :{ 
+ 'article-one' :{ 
     
     heading:' article one',
     question:'who is babxbu',
     description:'<p>let me tell you that who is babbu</p>'
     },
 
-    'articl-two':{
+    'article-two':{
     
     heading:' article two',
     question:'who is Rd',
