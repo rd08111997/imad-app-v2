@@ -8,7 +8,7 @@ var article = {
  'article-one' :{ 
     
     heading:' article one',
-   question:'who is babxbu',
+    question:'who is babxbu',
     description:'<p>let me tell you that who is babbu</p>'
     },
 
@@ -55,7 +55,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 app.get('/:articleName', function (req,res) {
-   articleName = req.params.artcileName;
+   var articleName = req.params.artcileName;
    res.send(create_dummy(article[articleName]));
 });
 
