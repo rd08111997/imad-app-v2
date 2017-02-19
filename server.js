@@ -5,12 +5,18 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var article = {
- 'articleone' :{ 
+ 'articl-eone' :{ 
     title:'article one',
     heading:' article one',
     question:'who is babxbu',
     description:'<p>let me tell you that who is babbu</p>'
-    }
+    },
+
+    'articl-two':{
+    title:'article two',
+    heading:' article two',
+    question:'who is Rd',
+    description:'<p>let me tell you that who is Rd</p>'}
 };
 function create_dummy(article)
 {
