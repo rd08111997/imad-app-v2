@@ -20,7 +20,7 @@ var article = {
 };
 function create_dummy(article)
 {
-    var title = article.title;
+   
     var heading = article.heading;
     var question = article.question;
     var description = article.description;
