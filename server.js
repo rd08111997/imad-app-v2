@@ -6,14 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 var article = {
  'articl-eone' :{ 
-    title:'article one',
+    
     heading:' article one',
     question:'who is babxbu',
     description:'<p>let me tell you that who is babbu</p>'
     },
 
     'articl-two':{
-    title:'article two',
+    
     heading:' article two',
     question:'who is Rd',
     description:'<p>let me tell you that who is Rd</p>'}
@@ -28,7 +28,7 @@ function create_dummy(article)
     `<!doctype html>
     <html>
     <head>
-    <title>${title}</title>    
+    <title>webapp</title>    
     </head>
     <body>
         <a href="/">home</a>
