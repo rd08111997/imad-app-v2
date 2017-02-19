@@ -4,12 +4,14 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articleone ={ 
+var article = {
+ 'articleone' :{ 
     title:'article one',
     heading:' article one',
     question:'who is babxbu',
     description:'<p>let me tell you that who is babbu</p>'
-    };
+    }
+};
 function create_dummy(article)
 {
     var title = article.title;
@@ -47,8 +49,9 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-app.get('/article-one', function (req,res) {
-   res.send(create_dummy(articleone));
+app.get('/:articleName', function (req,res) {
+   articleName = req.params.artcileName;
+   res.send(create_dummy(article[articleName]));
 });
 
 
