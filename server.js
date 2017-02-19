@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 var articleone ={ 
     title:'article one',
     heading:' article one',
-    question:'who is babbu',
+    question:'who is babxbu',
     description:'<p>let me tell you that who is babbu</p>'
     };
 function create_dummy(article)
