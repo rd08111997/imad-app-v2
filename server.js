@@ -7,9 +7,9 @@ app.use(morgan('combined'));
 var article = {
  'article-one' :{ 
     
-    heading:' article one',
-    question:'who is babxbu',
-    description:'<p>let me tell you that who is babbu</p>'
+    heading:'article one',
+    question:'who is person',
+    description:'<p>let me tell you that who is person</p>'
     },
 
     'article-two':{
@@ -37,7 +37,8 @@ function create_dummy(data)
         ${description}
          
     </body>
-    </html>`;
+    </html>`
+    ;
 return html_dummy;
 }
     
