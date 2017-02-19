@@ -8,7 +8,7 @@ var article = {
  'article-one' :{ 
     
     heading:' article one',
-    question:'who is babxbu',
+   question:'who is babxbu',
     description:'<p>let me tell you that who is babbu</p>'
     },
 
@@ -18,14 +18,13 @@ var article = {
     question:'who is Rd',
     description:'<p>let me tell you that who is Rd</p>'}
 };
-function create_dummy(article)
+function create_dummy(data)
 {
    
-    var heading = article.heading;
-    var question = article.question;
-    var description = article.description;
-     var html_dummy = 
-    `<!doctype html>
+    var heading = data.heading;
+    var question = data.question;
+    var description = data.description;
+    var html_dummy = `<!doctype html>
     <html>
     <head>
     <title>webapp</title>    
