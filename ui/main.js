@@ -2,9 +2,9 @@ console.log('Loaded!');
 var marginLeft = 0;
 var img = document.getElementById('madi');
 function movert(){
-  marginLeft = marginLeft+10;
+  marginLeft = marginLeft+1;
   img.style.marginLeft = marginLeft + 'px';
-  if(marginLeft==1200)
+  if(marginLeft==2000)
   {
       marginLeft = 1;
       img.style.marginLeft = marginLeft + 'px';
