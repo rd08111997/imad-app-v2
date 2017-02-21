@@ -62,6 +62,11 @@ app.get('/:articleName', function (req,res) {
    var articleName = req.params.articleName;
    res.send(create_dummy(article[articleName]));
 });
+var count= 0;
+app.get('/count',function (req,res){
+    count++;
+    res.send(count.toString());
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
