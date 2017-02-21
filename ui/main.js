@@ -11,10 +11,23 @@ function movert(){
 img.onclick = function(){
     var time = setInterval(movert,10);
     };
-var count = 0;
+
+
+//when button is clicked we request the server and get the response and parse it
 var button = document.getElementById("button");
     button.onclick = function(){
-        count++;        
-        var span  = document.getElementById("countno");
-        span.innerHTML = count.toString();
+       var request = new XMLHttpRequest();
+       request.onreadystatechange = function(){
+       if(httpRequest.readyState === XMLHttpRequest.DONE){
+         if(httpRequest.status === 200){
+          var count = reuest.responseText;   
+          var span  = document.getElementById("countno");
+          span.innerHTML = count.toString();        
+         }  
+       }    
+       };
+       request.open('GET','http://http://rd08111997.imad.hasura-app.io/count',true);
+       request.send(null);
+              
+        
     };
