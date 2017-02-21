@@ -41,9 +41,6 @@ function create_dummy(data)
     ;
 return html_dummy;
 }
-    
-var count = 0;
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
