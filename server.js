@@ -45,8 +45,6 @@ return html_dummy;
 var count = 0;
 
 app.get('/', function (req, res) {
-  count++;
-  res.send(count);
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
