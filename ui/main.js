@@ -26,7 +26,7 @@ var button = document.getElementById("button");
          }  
        }    
        };
-       request.open('GET','http://http://rd08111997.imad.hasura-app.io/count',true);
+       request.open('GET','http://rd08111997.imad.hasura-app.io/count',true);
        request.send(null);
               
         
