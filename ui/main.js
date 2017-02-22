@@ -41,7 +41,7 @@ var button = document.getElementById("button");
        if(request.readyState === XMLHttpRequest.DONE){
          if(request.status === 200){
           var list = request.responseText;
-          names = JSON.parse(names);
+          list = JSON.parse(list);
         var k='';
         for( var i=0;i<list.length;i++){
         k += '<li>' + list[i] + '</li>';
