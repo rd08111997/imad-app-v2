@@ -33,8 +33,7 @@ var button = document.getElementById("button");
     };
         
     var submit = document.getElementById("submit");
-    var nameInput = document.getElementById("name");
-    var namer = nameInput.value;
+    
     submit.onclick = function(){
         //when i submit it will change the li to say name one , 2etc
         var request = new XMLHttpRequest();
@@ -52,6 +51,8 @@ var button = document.getElementById("button");
          }  
        }
        };
+       var nameInput = document.getElementById("name");
+       var namer = nameInput.value;
         request.open('GET','http://rd08111997.imad.hasura-app.io/nameadd?name='+namer,true);
         request.send(null);
        
