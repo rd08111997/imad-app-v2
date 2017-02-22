@@ -33,7 +33,7 @@ var button = document.getElementById("button");
     };
         var ul = document.getElementById("list");
     var submit = document.getElementById("submit");
-    k = ul.innerHTML;
+    var k = ul.innerHTML;
     submit.onclick = function(){
         //when i submit it will change the li to say name one , 2etc
         var list = ['rachit','aryan'];
