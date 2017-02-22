@@ -31,3 +31,11 @@ var button = document.getElementById("button");
               
         
     };
+    var submit = document.getElementById("submit");
+    submit.onclick = function(){
+        //when i submit it will change the li to say name one , 2etc
+        var list = ['rachit','aryan'];
+        for( var i=0;i<list.length;i++)
+        ul.innerHtml = '<li>' + list[i] + '</li>';
+    };
+    var ul = document.getElementById("list");
