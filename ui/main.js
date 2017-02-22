@@ -39,5 +39,5 @@ var button = document.getElementById("button");
         var list = ['rachit','aryan'];
         k='';
         for( var i=0;i<list.length;i++)
-        k = '<li>' + list[i] + '</li>';
+        k += '<li>' + list[i] + '</li>';
     };
