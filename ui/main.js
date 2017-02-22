@@ -31,13 +31,15 @@ var button = document.getElementById("button");
               
         
     };
-        var ul = document.getElementById("list");
+        
     var submit = document.getElementById("submit");
-    var k = ul.innerHTML;
     submit.onclick = function(){
         //when i submit it will change the li to say name one , 2etc
         var list = ['rachit','aryan'];
-        k='';
-        for( var i=0;i<list.length;i++)
+        var k='';
+        for( var i=0;i<list.length;i++){
         k += '<li>' + list[i] + '</li>';
-    };
+        }
+           var ul = document.getElementById("list"); 
+           ul.innerHTML = k;
+        };
