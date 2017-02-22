@@ -62,6 +62,14 @@ app.get('/count', function (req,res) {
     count++;
     res.send(count.toString());
 });
+var names = [];
+app.get('/nameadd', function (req,res) {
+   var name = req.query.name;
+   names.push(name);
+   res.send(JSON.stringify(names));
+    
+});
+
 app.get('/:articleName', function (req,res) {
    var articleName = req.params.articleName;
    res.send(create_dummy(article[articleName]));
