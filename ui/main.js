@@ -33,13 +33,26 @@ var button = document.getElementById("button");
     };
         
     var submit = document.getElementById("submit");
+    var nameInput = document.getElementById("name");
+    var namer = nameInput.value;
     submit.onclick = function(){
         //when i submit it will change the li to say name one , 2etc
-        var list = ['rachit','aryan'];
+        var request = new XMLHttpRequest();
+       request.onreadystatechange = function(){
+       if(request.readyState === XMLHttpRequest.DONE){
+         if(request.status === 200){
+          var list = request.responseText;
+          names = JSON.parse(names);
         var k='';
         for( var i=0;i<list.length;i++){
         k += '<li>' + list[i] + '</li>';
         }
            var ul = document.getElementById("list"); 
-           ul.innerHTML = k;
+           ul.innerHTML = k;       
+         }  
+       }
+       };
+        request.open('GET','http://rd08111997.imad.hasura-app.io/nameadd?name='+namer,true);
+        request.send(null);
+       
         };
