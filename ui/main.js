@@ -37,5 +37,5 @@ var button = document.getElementById("button");
         //when i submit it will change the li to say name one , 2etc
         var list = ['rachit','aryan'];
         for( var i=0;i<list.length;i++)
-        ul.innerHtml = '<li>' + list[i] + '</li>';
+        ul.innerHTML = '<li>' + list[i] + '</li>';
     };
