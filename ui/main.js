@@ -9,6 +9,10 @@ console.log('Loaded!');
         $(this).css("background-color", "lightblue");
         $(".openlist").hide();
     }
+ 
+  });
+  $(document).ready(function(){
+      $(".openlist").hide();
   });
 var marginLeft = 0;
 var img = document.getElementById('madi');
