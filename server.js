@@ -42,7 +42,7 @@ function create_dummy(data)
     <input type="submit" id="comsubmit" value"submit"></input>
     <ul id ="commentlist">
     </ul>
-     <script type="text/javascript" src="/ui/main.js">
+     <script type="text/javascript" src="/ui/article.js">
         </script>
     </body>
     </html>`
