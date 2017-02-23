@@ -1,9 +1,10 @@
 console.log('Loaded!');
 
-  $("#click").on({
+  $(".headbutton").on({
     mouseenter: function(){
         $(this).css("background-color", "yellow");
     $(".openlist").show("slow");
+    $(".")
     }, 
     mouseleave: function(){
         $(this).css("background-color", "lightblue");
@@ -12,7 +13,7 @@ console.log('Loaded!');
  
   });
   $(document).ready(function(){
-      $(".openlist").hide("slow");
+      $(".openlist").hide();
   });
   $(".openlist").on({
       mouseenter:function(){
