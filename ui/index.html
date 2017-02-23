@@ -4,12 +4,10 @@
         <link href="/ui/style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
         <script type="text/javascript">
-            $("placeholder").mouseenter(function(){
-                $("list").fadeIn("slow");
+            $("placeholder").click(function(){
+                $("list").fadeToggle("slow");
             });
-             $("placeholder").mouseleave(function(){
-                $("list").fadeOut("slow");
-            });
+             
             
         </script>
     </head>
