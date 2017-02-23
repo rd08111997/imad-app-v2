@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
   $("button").click(function(){
-                $("ul").fadeToggle("slow");
+               alert("hi");
             });
 var marginLeft = 0;
 var img = document.getElementById('madi');
