@@ -29,32 +29,7 @@ function create_dummy(data)
     <head>
     <link href="/ui/style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-    <script>
-    $("#comsubmit").click(function(){
-        var request = new XMLHttpRequest();
-       request.onreadystatechange = function(){
-       if(request.readyState === XMLHttpRequest.DONE){
-         if(request.status === 200){
-         var list = request.responseText;
-          list = JSON.parse(list);
-        var k='';
-        for( var i=0;i<list.length;i++){
-        k += '<li>' + list[i] + '</li>';
-        }
-           var ul = document.getElementById("commentlist"); 
-           ul.innerHTML = k; 
-            
-             
-         }
-           
-       }
- var nameInput = document.getElementById("comment");
-       var namer = nameInput.value;
- request.open('GET','http://rd08111997.imad.hasura-app.io/comments?commentno='+namer,true);
-       request.send(null);
-       }   
-    });
-    </script>
+    
     <title>webapp</title>    
     </head>
     <body>
@@ -67,7 +42,8 @@ function create_dummy(data)
     <input type="submit" id="comsubmit" value"submit"></input>
     <ul id ="commentlist">
     </ul>
-    
+     <script type="text/javascript" src="/ui/main.js">
+        </script>
     </body>
     </html>`
     ;
