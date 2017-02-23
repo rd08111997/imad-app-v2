@@ -1,4 +1,8 @@
 console.log('Loaded!');
+
+  $("placeholder").click(function(){
+                $("list").fadeToggle("slow");
+            });
 var marginLeft = 0;
 var img = document.getElementById('madi');
 function movert(){
