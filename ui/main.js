@@ -14,6 +14,25 @@ console.log('Loaded!');
   $(document).ready(function(){
       $(".openlist").hide();
   });
+  $(".openlist").on({
+      mouseenter:function(){
+          $(this).show();
+          },
+          mouseleave:function(){
+              $(this).hide();
+          }
+      });
+      $("#one").on({
+    mouseenter: function(){
+        $(this).css("background-color", "yellow");
+    
+    }, 
+    mouseleave: function(){
+        $(this).css("background-color", "lightblue");
+        
+    }
+ 
+  });
 var marginLeft = 0;
 var img = document.getElementById('madi');
 function movert(){
