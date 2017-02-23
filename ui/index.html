@@ -3,6 +3,15 @@
     <head>
         <link href="/ui/style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+            $("placeholder").mouseenter(function(){
+                $("list").fadeIn("slow");
+            });
+             $("placeholder").mouseleave(function(){
+                $("list").fadeOut("slow");
+            });
+            
+        </script>
     </head>
     <body>
         <div class ="headbutton">
@@ -10,7 +19,7 @@
                 click
             </div>
             <div class ="openlist">
-                <ul>
+                <ul class="list">
                     <li>
                         one
                     </li>
@@ -23,15 +32,7 @@
                 </ul>
             </div>
         </div>
-        <script type="text/javascript">
-            $("placeholder").mouseenter(function(){
-                $("openlist").fadeOut("slow");
-            });
-             $("placeholder").mouseleave(function(){
-                $("openlist").fadeIn("slow");
-            });
-            
-        </script>
+        
         <div class = "contain">
         <div id="madi" class ="center">
             <img src="/ui/madi.png" class="img-medium"/>
