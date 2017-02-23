@@ -1,5 +1,5 @@
-
- $("#comsubmit").click(function(){
+var comsubmit = document.getElementById("comsubmit"); 
+comsubmit.onclick= function(){
         var request = new XMLHttpRequest();
        request.onreadystatechange = function(){
        if(request.readyState === XMLHttpRequest.DONE){
@@ -22,4 +22,4 @@
  request.open('GET','http://rd08111997.imad.hasura-app.io/comments?commentno='+namer,true);
        request.send(null);
        };   
-    });
+    };
