@@ -23,6 +23,9 @@ body {
     height: 200px;
     
 }
+a{
+    color:black;
+}
 #para {
     font-family: Sans-serif;
     font-size: 20%;
