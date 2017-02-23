@@ -3,23 +3,23 @@ console.log('Loaded!');
   $("#click").on({
     mouseenter: function(){
         $(this).css("background-color", "yellow");
-    $(".openlist").show();
+    $(".openlist").show("slow");
     }, 
     mouseleave: function(){
         $(this).css("background-color", "lightblue");
-        $(".openlist").hide();
+        $(".openlist").hide("slow");
     }
  
   });
   $(document).ready(function(){
-      $(".openlist").hide();
+      $(".openlist").hide("slow");
   });
   $(".openlist").on({
       mouseenter:function(){
-          $(this).show();
+          $(this).show("slow");
           },
           mouseleave:function(){
-              $(this).hide();
+              $(this).hide("slow");
           }
       });
       $("#one,#two,#three").on({
