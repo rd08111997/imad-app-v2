@@ -22,7 +22,7 @@ console.log('Loaded!');
               $(this).hide();
           }
       });
-      $("#one").on({
+      $("#one,#two,#three").on({
     mouseenter: function(){
         $(this).css("background-color", "yellow");
     
