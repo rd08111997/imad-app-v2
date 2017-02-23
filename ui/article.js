@@ -1,5 +1,5 @@
        var kak = document.getElementById("comsubmit"); 
-         kak.onclick= function(){
+    kak.onclick= function(){
        var request = new XMLHttpRequest();
        request.onreadystatechange = function(){
            if(request.readyState === XMLHttpRequest.DONE){
