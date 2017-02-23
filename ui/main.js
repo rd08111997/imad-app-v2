@@ -1,9 +1,15 @@
 console.log('Loaded!');
 
-  $("#click").mouseenter(function(){
-             $(this).css("background-color", "yellow");
-             $(".openlist").fadetoggle();
-            });
+  $("#click").on({
+    mouseenter: function(){
+        $(this).css("background-color", "yellow");
+    $(".openlist").show();
+    }, 
+    mouseleave: function(){
+        $(this).css("background-color", "lightblue");
+        $(".openlist").hide();
+    }
+  });
 var marginLeft = 0;
 var img = document.getElementById('madi');
 function movert(){
