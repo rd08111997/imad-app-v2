@@ -48,8 +48,9 @@ function create_dummy(data)
          }
            
        }
- 
- request.open('GET','http://rd08111997.imad.hasura-app.io/comments?commentno='+comments,true);
+ var nameInput = document.getElementById("comment");
+       var namer = nameInput.value;
+ request.open('GET','http://rd08111997.imad.hasura-app.io/comments?commentno='+,true);
        request.send(null);
          
     });
