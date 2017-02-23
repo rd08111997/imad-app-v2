@@ -19,7 +19,7 @@ comsubmit.onclick= function(){
        }
  var nameInput = document.getElementById("comment");
        var namer = nameInput.value;
- request.open('GET','http://rd08111997.imad.hasura-app.io/comments?commentno='+namer,true);
+ request.open('GET','http://rd08111997.imad.hasura-app.io/article-one/comments?commentno='+namer,true);
        request.send(null);
        };   
     };
