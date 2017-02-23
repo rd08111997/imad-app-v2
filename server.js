@@ -27,6 +27,7 @@ function create_dummy(data)
     var html_dummy = `<!doctype html>
     <html>
     <head>
+    <link href="/ui/style.css" rel="stylesheet" type="text/css" />
     <title>webapp</title>    
     </head>
     <body>
@@ -36,6 +37,7 @@ function create_dummy(data)
         <h3>${question}</h3>
         ${description}
     <input type="text" id="comment" placeholder="commment"></input>
+    
     </body>
     </html>`
     ;
