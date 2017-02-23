@@ -35,7 +35,7 @@ function create_dummy(data)
         <h1>${heading}</h1>
         <h3>${question}</h3>
         ${description}
-    <input type="text" id="comment" placeholder="commment></input>"
+    <input type="text" id="comment" placeholder="commment"></input>
     </body>
     </html>`
     ;
