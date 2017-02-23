@@ -28,8 +28,9 @@ body {
     font-size: 20%;
 }
 .placeholder {
-    width:40px;
-    height:40px;
+    width:50px;
+    text-align:center;
+    padding:10px;
 }
 #click {
     background-color:lightblue;
