@@ -27,4 +27,7 @@ body {
     font-family: Sans-serif;
     font-size: 20%;
 }
-
+.placeholder {
+    width:40px;
+    height:40px;
+}
