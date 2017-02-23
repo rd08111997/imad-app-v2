@@ -4,7 +4,7 @@ console.log('Loaded!');
     mouseenter: function(){
         $(this).css("background-color", "yellow");
     $(".openlist").show("slow");
-    $(".")
+   
     }, 
     mouseleave: function(){
         $(this).css("background-color", "lightblue");
