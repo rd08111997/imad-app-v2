@@ -61,7 +61,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 var comment=[];
-app.get('/comments',function (req,res){
+app.get('/article-one/comments',function (req,res){
     var commentno = req.query.commentno;
     comment.push(commentno);
     res.send(JSON.stringify(comment));
