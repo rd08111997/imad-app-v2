@@ -1,7 +1,8 @@
 console.log('Loaded!');
 
-  $("button").click(function(){
-             $("ul").fadeToggle();
+  $("#click").mouseenter(function(){
+             $(this).css("background-color", "yellow");
+             $(".openlist").fadetoggle();
             });
 var marginLeft = 0;
 var img = document.getElementById('madi');
