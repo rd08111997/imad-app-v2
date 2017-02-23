@@ -28,6 +28,12 @@ function create_dummy(data)
     <html>
     <head>
     <link href="/ui/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script>
+    $("#comsubmit").click(function(){
+        var request = new X
+    });
+    </script>
     <title>webapp</title>    
     </head>
     <body>
@@ -37,6 +43,9 @@ function create_dummy(data)
         <h3>${question}</h3>
         ${description}
     <input type="text" id="comment" placeholder="commment"></input>
+    <input type="submit" id="comsubmit" value"submit"></input>
+    <ul id ="commentlist">
+    </ul>
     
     </body>
     </html>`
