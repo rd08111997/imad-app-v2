@@ -80,19 +80,7 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/article.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article.js'));
 });
-app.get('/testdb', function (req, res) {
-  pool.query('SELECT * FROM test',function(err, result) {
-      // handle an error from the query
-      if(err) 
-     { res.status(500).send(err.toString());}
-     else
-     {
-         res.send(JSON.stringify(result));
-         
-     }
-      
-    });
-});
+
 var comment=[];
 app.get('/article-one/comments',function (req,res){
     var commentno = req.query.commentno;
