@@ -7,7 +7,7 @@ var config = {
     database:'rd08111997',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password:db-rd08111997-15259
+    password:'db-rd08111997-15259'
     
 };
 var pool = new Pool(config);
