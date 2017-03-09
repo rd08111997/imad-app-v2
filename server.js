@@ -47,7 +47,7 @@ function create_dummy(data)
         <a href="/">home</a>
         <hr/>
         <h1>${heading}</h1>
-        <h3>${question}</h3>
+        <h3>${date}</h3>
         ${content}
     <input type="text" id="comment" placeholder="commment"></input>
     <input type="submit" id="comsubmit" value"submit"></input>
