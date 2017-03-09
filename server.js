@@ -10,6 +10,7 @@ var config = {
     password:'db-rd08111997-15259'
     
 };
+var crypto = require('crypto');
 var pool = new Pool(config);
 
 
@@ -133,7 +134,14 @@ app.get('/article/:articleName', function (req,res) {
    //pool.query("SELECT * from article WHERE title=" + req.params.articleName , funtion (err,res){
    //});
    
-
+function hash(input,salt){
+   var hashed =  crypto.pbkdf2Sync(input,salt,100000, 512, 'sha512');
+   return hashed.toString('hex');
+}
+app.get('/hash/:input' , function (req , res){
+    var userInput = hash(req.params.input,'rand');
+    res.send(userInput);
+});
 
 
 
