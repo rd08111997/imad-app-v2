@@ -33,8 +33,8 @@ function create_dummy(data)
 {
    
     var heading = data.heading;
-    var question = data.question;
-    var description = data.description;
+    var date = data.date;
+    var content = data.content;
     var html_dummy = `<!doctype html>
     <html>
     <head>
@@ -48,7 +48,7 @@ function create_dummy(data)
         <hr/>
         <h1>${heading}</h1>
         <h3>${question}</h3>
-        ${description}
+        ${content}
     <input type="text" id="comment" placeholder="commment"></input>
     <input type="submit" id="comsubmit" value"submit"></input>
     <ul id ="commentlist">
@@ -114,10 +114,26 @@ app.get('/nameadd', function (req,res) {
     
 });
 
-app.get('/:articleName', function (req,res) {
-   var articleName = req.params.articleName;
-   res.send(create_dummy(article[articleName]));
-});
+app.get('/article/:articleName', function (req,res) {
+   pool.query("SELECT * from article WHERE title=" + req.params.articleName , function (err,result){
+             if(err) {
+           res.status(500).send(err.toString());
+       }
+       else{
+           if(result.rows.length===0){
+               res.status(404).send("not found sorry");
+           }
+           else{
+               var articleData = result.rows[0];
+               res.send(create_dummy(articleData)); 
+           }
+       }
+   });
+   });
+   //pool.query("SELECT * from article WHERE title=" + req.params.articleName , funtion (err,res){
+   //});
+   
+
 
 
 
