@@ -175,8 +175,13 @@ app.get('/userpage/:pro', function (req, res) {
      } 
     });
 });
-
-var port = 8080; // Use 8080 for local development because you might already have apache running on 80
-app.listen(8080, function () {
+app.get('/userpage/user', function (req, res) {
+    pool.query('INSERT INTO "user" (username,password,address,name) VALUES ($1,$2,$3,$4)',[username,password,address,name], function(err,result){
+         if(err) 
+     { res.status(500).send(err.toString());}
+     else {
+         res.send("user created"+username);
+     }
+    });
   console.log(`IMAD course app listening on port ${port}!`);
 });
