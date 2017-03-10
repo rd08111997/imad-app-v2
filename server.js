@@ -87,7 +87,7 @@ function createProduct(data){
     return prohtml;
 }
 app.get('/userpage/:pro', function (req, res) {
-  pool.query("SELECT * from article WHERE title='" + req.params.pro + "'", function (err,result){
+  pool.query("SELECT * from products WHERE title='" + req.params.pro + "'", function (err,result){
       // handle an error from the query
       if(err) 
      { res.status(500).send(err.toString());}
