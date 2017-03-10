@@ -87,7 +87,7 @@ function createProduct(data){
     return prohtml;
 }
 
-app.get('/ui/userpage.html',function (req,res){
+app.get('/ui/userpage',function (req,res){
    res.sendFile(path.join(__dirname, 'ui', 'userpage.html')); 
 });
 
