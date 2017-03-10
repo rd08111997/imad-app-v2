@@ -104,6 +104,9 @@ app.get('/userpage/:pro', function (req, res) {
      } 
     });
 });
+app.get('/ui/userpage.html',function (req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'userpage.html')); 
+});
 
 
 app.get('/ui/style.css', function (req, res) {
