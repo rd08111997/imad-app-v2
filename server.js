@@ -11,11 +11,13 @@ var config = {
     
 };
 var crypto = require('crypto');
+var bodyParser = require('body-parser');
 var pool = new Pool(config);
 
 
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 var article = {
  'article-one' :{ 
     
@@ -175,7 +177,12 @@ app.get('/userpage/:pro', function (req, res) {
      } 
     });
 });
-app.get('/userpage/user', function (req, res) {
+app.post('/userpage/user', function (req, res) {
+    var username = req.body.username;
+    var password = req.body.password;
+    var address = req.body.address;
+    var name = req.body.name;
+    
     pool.query('INSERT INTO "user" (username,password,address,name) VALUES ($1,$2,$3,$4)',[username,password,address,name], function(err,result){
          if(err) 
      { res.status(500).send(err.toString());}
@@ -183,5 +190,6 @@ app.get('/userpage/user', function (req, res) {
          res.send("user created"+username);
      }
     });
+
   console.log(`IMAD course app listening on port ${port}!`);
 });
