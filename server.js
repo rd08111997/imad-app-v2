@@ -64,31 +64,47 @@ return html_dummy;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/testdb', function (req, res) {
-  pool.query('SELECT * FROM test',function(err, result) {
+function createProduct(data){
+    var image = data.image;
+    var title = data.title;
+    var price = data.price;
+    var description = data.description;
+    var prohtml = `<!DOCTYPE HTML>
+    <html>
+    <head>
+    <title>${title}</title>
+    </head>
+    <body>
+    <a href="/">home</a>
+        <hr/>
+        <h1>${title}</h1>
+        <p>
+        ${description}
+        </p>
+        <p>${price}</p>
+    </body>
+    </html>`;
+    return prohtml;
+}
+app.get('/userpage/:pro', function (req, res) {
+  pool.query("SELECT * from article WHERE title='" + req.params.pro + "'", function (err,result){
       // handle an error from the query
       if(err) 
      { res.status(500).send(err.toString());}
+     else{
+           if(result.rows.length===0){
+               res.status(404).send("not found sorry");
+           }
      else
      {
-         res.send(JSON.stringify(result.rows));
+        var product= result.rows[0];
+        res.send(createProduct(product));
          
      }
-      
+     } 
     });
 });
-app.get('/almonds', function (req , res){
-    pool.query('SELECT * FROM products',function(err , result){
-if(err){
-    res.status(500).send(err.toString());
-} 
-else
-{
-    res.send(JSON.stringify(result.rows));
-}
-    });
-    
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
